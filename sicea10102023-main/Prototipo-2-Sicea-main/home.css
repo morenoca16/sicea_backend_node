@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Estilos para el menú lateral */
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Ancho del menú */
+    height: 100%; /* Altura completa */
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es largo */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    transition: width 0.3s; /* Transición suave para el ancho */
+}
+
+/* Estilos para el logo */
+#logo {
+    padding: 20px;
+    width: 100px; /* Tamaño del logo */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para el usuario y el menú desplegable */
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #555; /* Línea divisoria */
+}
+
+.user .info {
+    flex: 1;
+    padding-left: 10px;
+}
+
+/* Estilos para los íconos del menú */
+.nav li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555; /* Línea divisoria */
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Cambio de ancho del menú al hacer clic en el icono de hamburguesa */
+.sidebar-wrapper.collapsed {
+    width: 70px; /* Ancho reducido */
+}
+
+/* Estilo para el texto del menú cuando está colapsado */
+.sidebar-wrapper.collapsed .nav p {
+    display: none; /* Ocultar el texto del menú */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    margin-left: 250px; /* Margen para acomodar el menú lateral */
+    padding: 20px;
+}
+
+
+/* Estilos para el botón de salida */
+.exit-button {
+    padding: 10px 20px;
+    border-top: 1px solid #555; /* Línea divisoria */
+}
+
+.exit-button a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.exit-button a i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.exit-button:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el mouse */
+}

@@ -1,0 +1,164 @@
+/* Estilos generales para la página de administración */
+
+/* Reset de estilos predeterminados del body */
+body {
+    background-color: #f4f4f4; /* Color de fondo */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+
+/* Estilos para el contenido principal */
+.content {
+    margin-left: 250px; /* Alineamos el contenido principal al lado derecho del menú lateral */
+    padding: 20px;
+    flex: 1; /* Hacemos que el contenido principal ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Alineamos el contenido principal en una columna vertical */
+}
+
+/* Estilos para el logo en el menú lateral */
+#logo {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el menú lateral */
+.sidebar-wrapper {
+    width: 250px; /* Ancho del menú lateral */
+    background-color: #333; /* Color de fondo del menú */
+    color: #fff; /* Color del texto del menú */
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Estilos para la navegación en el menú lateral */
+.nav {
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el encabezado de migajas de pan (breadcrumb) */
+#breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    padding-left: 20px;
+}
+
+#breadcrumb li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#breadcrumb a.active {
+    font-weight: bold;
+}
+
+/* Estilos para las secciones de administración */
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #e29219;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-hr {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones cuadrados */
+.btn.btn-primary.square {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Estilos para los íconos en los botones cuadrados */
+.btn.btn-primary.square h2 {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #333; /* Cambia el color de fondo a tu elección */
+    color: #fff; /* Cambia el color del texto a tu elección */
+    padding: 10px 0; /* Añade espacio alrededor del contenido del navbar */
+    position: fixed; /* Haz que el navbar sea fijo en la parte superior */
+    width: 100%; /* Establece el ancho al 100% para que ocupe toda la pantalla */
+    top: 0; /* Asegura que esté en la parte superior */
+}
+
+.navbar .user-button {
+    
+    float: right; /* Mueve el botón de usuario a la derecha */
+    margin-right: 20px; /* Añade un margen a la derecha para separarlo del borde */
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+    color: #fff; /* Cambia el color del icono a tu elección */
+    font-size: 15px; /* Ajusta el tamaño del icono según sea necesario */
+    cursor: pointer;
+}
+
+
+
+/* Estilo para el contenido principal */
+.content {
+    margin-top: 70px; /* Ajusta la altura para que coincida con la altura del navbar */
+    /* Agrega más estilos de diseño de contenido aquí */
+}

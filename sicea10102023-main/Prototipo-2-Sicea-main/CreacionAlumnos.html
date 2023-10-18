@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de taller</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CreacionAlumnos.css"> <!-- Vincula tu archivo de estilos externo -->
+    <style>
+        /* Estilos para la tarjeta de clase */
+        .class-card {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Menú lateral -->
+        <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="772a6c19-7b7a-d16f-03e2-1da3e4d914e0">
+            <img src="imagenes/logo.png" class="img-fluid" alt="Logo" id="logo">
+            <ul class="nav">
+                <li class="">
+                    <a href="home.html" rel="tooltip" title="" data-placement="right" data-original-title="Dashboard">
+                        <i class="fa fa-home"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="administracion.html" rel="tooltip" title="" data-placement="right" data-original-title="Aprendices">
+                        <i class="fa fa-mortar-board"></i>
+                        <p>Administración</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="calendario.html" rel="tooltip" title="" data-placement="right" data-original-title="Calendario">
+                        <i class="fa fa-calendar"></i>
+                        <p>Calendario</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="servicios.html" rel="tooltip" title="" data-placement="right" data-original-title="Administración">
+                        <i class="fa fa-sliders"></i>
+                        <p>Servicios</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="ajustes.html" rel="tooltip" title="" data-placement="right" data-original-title="Procesos">
+                        <i class="fa fa-folder-open"></i>
+                        <p>Ajustes</p>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Sección 1: Escuela -->
+                    <div class="col-md-12">
+                        <div id="accessSchool" class="card">
+                            <h4 id="school" class="no-margin">Creacion Perfil alumno</h4>
+                            <hr class="card-hr">
+                            <li class="">
+                                <a href="#" onclick="addNewClass()">
+                                    <i class="fa fa-plus"></i>
+                                    <p>Añadir Nuevo alumno</p>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                           
+                <div class="" id="classCard">
+                    <h2>Nueva Alumno</h2>
+                    <label for="classCode">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <br>
+                    <label for="classCode">Documento:</label>
+                    <input type="text" id="documento" name="documento">
+                    <br>
+                    <label for="classCode">Correo:</label>
+                    <input type="text" id="Correo_Electronico" name="Correo_Electronico">
+                    <br>
+                    <label for="classDate">Contraseña:</label>
+                    <input type="text" id="passwor" name="passwor">
+                    
+                    <button  onclick="saveClass()">Listo</button>
+                </div>
+            
+            <div>
+                
+            </div>
+        </div>
+    
+        <script>
+
+function saveClass(){
+// Obtener los valores de los campos del formulario
+var nombre = document.getElementById('nombre').value;
+    var documento = document.getElementById('documento').value;
+    var Correo_Electronico = document.getElementById('Correo_Electronico').value;
+    var passwor = document.getElementById('passwor').value;
+
+
+    // Crear un objeto con los datos del formulario para enviarlos más fácilmente con jQuery
+    var data = {
+        nombre: nombre,
+        documento: documento,
+        Correo_Electronico: Correo_Electronico,
+        passwor: passwor
+    };
+
+    $.ajax({
+     type: "GET",
+     url: "http://localhost/SICEA/Controllers/crear.php?nombre="+nombre+"&documento="+documento+"&Correo_Electronico="+Correo_Electronico+"&passwor="+passwor,
+     success: function(respuesta){
+         //si la solicitud es hecha éxitosamente entonces la respuesta representa los datos
+         console.log(respuesta);
+         if(respuesta != 0){
+             
+             localStorage.setItem('activo', 1);
+         }else{
+             
+             localStorage.setItem('activo', 0);
+         }
+         // $( "#resultado" ).empty().append( respuesta );
+     }});
+
+
+
+}
+
+    
+        </script>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

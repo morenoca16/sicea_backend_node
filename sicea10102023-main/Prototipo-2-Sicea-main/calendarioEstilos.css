@@ -1,0 +1,70 @@
+/* Estilos generales para la página de administración */
+body {
+    background-color: #f4f4f4; /* Color de fondo */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+
+
+/* Estilos para el logo en el menú lateral */
+#logo {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el menú lateral */
+.sidebar-wrapper {
+    width: 250px; /* Ancho del menú lateral */
+    background-color: #333; /* Color de fondo del menú */
+    color: #fff; /* Color del texto del menú */
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav {
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+.container {
+    width: 100%;         /* Asegura que el contenedor ocupe todo el ancho posible */
+    overflow-x: auto;    /* Permite el desplazamiento horizontal si el contenido es demasiado ancho */
+}
+.table {
+    width: 90%;          /* Ancho del calendario, ajusta según tus necesidades */
+    margin-right: 5%;    /* Margen a la derecha para evitar que se corte */
+}
+.calendar-container {
+    margin-left: 250px; /* Margen izquierdo equivalente al ancho del menú lateral */
+}
+
+.table {
+    border-collapse: collapse;
+    width: calc(100% - 10px); /* Ajusta el ancho con un pequeño margen */
+    margin-top: 50px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Agrega desplazamiento horizontal si es necesario */
+}
+.content {
+    flex-grow: 1;
+    padding-left: 20px; /* Ajusta el espacio entre el menú y el contenido */
+    margin-right: 20px; /* Añade un margen a la derecha para que haya espacio */
+}

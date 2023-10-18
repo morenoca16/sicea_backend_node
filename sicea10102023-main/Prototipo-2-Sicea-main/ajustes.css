@@ -1,0 +1,75 @@
+/* Estilos generales para la página de administración */
+body {
+    background-color: #f4f4f4; /* Color de fondo */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+
+
+/* Estilos para el logo en el menú lateral */
+#logo {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el menú lateral */
+.sidebar-wrapper {
+    width: 250px; /* Ancho del menú lateral */
+    background-color: #333; /* Color de fondo del menú */
+    color: #fff; /* Color del texto del menú */
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav {
+    padding-left: 0;
+    list-style: none;
+}
+
+.nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #333; /* Cambia el color de fondo a tu elección */
+    color: #fff; /* Cambia el color del texto a tu elección */
+    padding: 10px 0; /* Añade espacio alrededor del contenido del navbar */
+    position: fixed; /* Haz que el navbar sea fijo en la parte superior */
+    width: 100%; /* Establece el ancho al 100% para que ocupe toda la pantalla */
+    top: 0; /* Asegura que esté en la parte superior */
+}
+
+.navbar .user-button {
+    float: right; /* Mueve el botón de usuario a la derecha */
+    margin-right: 20px; /* Añade un margen a la derecha para separarlo del borde */
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+    color: #fff; /* Cambia el color del icono a tu elección */
+    font-size: 15px; /* Ajusta el tamaño del icono según sea necesario */
+    cursor: pointer;
+}
+
+/* Estilo para el contenido principal */
+.content {
+    margin-top: 70px; /* Ajusta la altura para que coincida con la altura del navbar */
+    /* Agrega más estilos de diseño de contenido aquí */
+}

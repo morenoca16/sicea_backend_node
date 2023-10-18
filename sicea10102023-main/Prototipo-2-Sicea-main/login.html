@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="login-estilos.css">
+    <link rel="stylesheet" href="siceaestilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Iniciar Sesión</title>
+    <!-- Agrega tus estilos y enlaces aquí si es necesario -->
+</head>
+
+<body class="login login-page"> <!-- Puedes combinar las clases en una sola atribución -->
+    <a href="sicea.html"><img src="imagenes/logo.png" alt="Logo del proyecto" id="logo"></a>
+    <a href="sicea.html" class="return-button">Volver a SICEA</a>
+    <br>
+    <a href="home.html" class="return-button">home</a>
+    <h1>Iniciar Sesión</h1>
+    <!-- Agrega la clase "login-form" al form -->
+    <!-- Agrega aquí tus campos de usuario y contraseña con la clase "login-input" -->
+    <input type="text" id="username" name="usuario" placeholder="Usuario" required class="login-input">
+    <input type="password" id="password" name="contrasena" placeholder="Contraseña" required class="login-input">
+    <button class="login-button" onclick="ingresarLogin()">Iniciar Sesión</button>
+
+</body>
+
+</html>
+
+<script>
+    function ingresarLogin() {
+        // let username = document.getElementById('username').value;
+        let username=$('#username').val();
+        let password=$('#password').val();
+
+        if(username == '' || username == null || username == undefined){
+            alert('Campo username vacio');
+            return false;
+        }
+
+        if(password == '' || password == null || password == undefined){
+            alert('Campo password vacio');
+            return false;
+        }
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost/SICEA/Controllers/loginController.php?username="+username+"&password="+password,
+            success: function(respuesta){
+                //si la solicitud es hecha éxitosamente entonces la respuesta representa los datos
+                console.log(respuesta);
+                if(respuesta != 0){
+                    location.href="home.html";
+                    localStorage.setItem('activo', 1);
+                }else{
+                    location.href="login.html";
+                    localStorage.setItem('activo', 0);
+                }
+                // $( "#resultado" ).empty().append( respuesta );
+            }
+        });
+
+        
+
+        
+    }
+</script>

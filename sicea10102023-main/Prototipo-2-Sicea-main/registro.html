@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="siceaestilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>registro Administrador</title>
+    <!-- Agrega tus estilos y enlaces aquí si es necesario -->
+</head>
+<body>
+    <a href="sicea.html"><img src="imagenes/logo.png" alt="Logo del proyecto" id="logo"></a>
+    <a href="sicea.html" class="return-button">Volver a SICEA</a>
+    <h1>Registro Administrador</h1>
+    <form action="procesar_registro.php" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="password" name="contrasena" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>servicios</title>
+    <link rel="stylesheet" href="home.css"> <!-- Vincula tu archivo de estilos externo -->
+    <link rel="stylesheet" href="servicios.css"> <!-- Vincula tu archivo de estilos externo -->
+
+</head>
+<body>
+    <!-- Contenido de tu página de inicio -->
+    <div class="container">
+        <!-- Menú lateral -->
+        <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="772a6c19-7b7a-d16f-03e2-1da3e4d914e0">
+            <img src="imagenes/logo.png" class="img-fluid" alt="Logo" id="logo">
+            <ul class="nav">
+                <li class="">
+                    <a href="home.html" rel="tooltip" title="" data-placement="right" data-original-title="Dashboard">
+                        <i class="fa fa-home"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="administracion.html" rel="tooltip" title="" data-placement="right" data-original-title="Aprendices">
+                        <i class="fa fa-mortar-board"></i>
+                        <p>Administración</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="procesos.html" rel="tooltip" title="" data-placement="right" data-original-title="Calendario">
+                        <i class="fa fa-calendar"></i>
+                        <p>Procesos</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="servicios.html" rel="tooltip" title="" data-placement="right" data-original-title="Administración">
+                        <i class="fa fa-sliders"></i>
+                        <p>Servicios</p>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="ajustes.html" rel="tooltip" title="" data-placement="right" data-original-title="Procesos">
+                        <i class="fa fa-folder-open"></i>
+                        <p>Ajustes</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Contenido principal -->
+        <div>
+            <!-- Navbar superior -->
+            <div class="navbar">
+                <div class="user-button">
+                    <div class="user-menu" id="userMenu">
+                        <button onclick="logout()">Cerrar Sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="content">
+
+
+        </div>
+    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+    <script>
+        
+        function logout() {
+            // Agrega aquí el código para cerrar la sesión y redirigir a la página de inicio de sesión (login.html)
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>
